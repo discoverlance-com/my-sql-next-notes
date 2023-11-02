@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "~/lib/utils";
 import Header from "./Header";
+import { Toaster } from "~/components/ui/toaster";
 
 import "./globals.css";
 
@@ -19,14 +20,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased container",
-          interFont.variable
-        )}
-      >
-        <Header />
-        <main>{children}</main>
+      <body>
+        <div
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased container",
+            interFont.variable
+          )}
+        >
+          <Header />
+          <main className="mt-8">{children}</main>
+        </div>
+
+        <Toaster />
       </body>
     </html>
   );
