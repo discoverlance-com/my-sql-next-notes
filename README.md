@@ -2,7 +2,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First,
+
+- Create a vercel [postgres database](https://vercel.com/docs/storage/vercel-postgres/quickstart#create-a-postgres-database)
+- Copy your database credentials from the vercel dashboard (database you created) and put it locally in a `.env.development.local`.
+
+Second, run the development server:
 
 ```bash
 npm run dev
