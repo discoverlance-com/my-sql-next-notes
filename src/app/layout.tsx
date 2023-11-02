@@ -20,14 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased container",
-          interFont.variable
-        )}
-      >
-        <Header />
-        <main className="mt-8">{children}</main>
+      <body>
+        <div
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased container",
+            interFont.variable
+          )}
+        >
+          <Header />
+          <main className="mt-8">{children}</main>
+        </div>
         <Toaster />
       </body>
     </html>
