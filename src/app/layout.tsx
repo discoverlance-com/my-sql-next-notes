@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "~/lib/utils";
 import Header from "./Header";
+import { Toaster } from "~/components/ui/toaster";
 
 import "./globals.css";
 
@@ -26,7 +27,8 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main>{children}</main>
+        <main className="mt-8">{children}</main>
+        <Toaster />
       </body>
     </html>
   );
