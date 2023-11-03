@@ -35,7 +35,9 @@ const NewNoteForm = () => {
   return (
     <Card className="max-w-lg">
       <CardHeader>
-        <CardTitle>Create Note</CardTitle>
+        <h1 className="text-2xl font-semibold leading-none tracking-tight">
+          Create Note
+        </h1>
       </CardHeader>
 
       <CardContent>

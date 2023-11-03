@@ -28,7 +28,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div>
       <Card>
         <CardHeader>
-          <CardTitle>{note.title}</CardTitle>
+          <h1 className="text-2xl font-semibold leading-none tracking-tight">
+            {note.title}
+          </h1>
         </CardHeader>
 
         <CardContent>{note.description}</CardContent>

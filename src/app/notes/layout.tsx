@@ -24,12 +24,14 @@ export default async function Layout({
     <div className="grid gap-8 grid-cols-3">
       <Card>
         <CardHeader>
-          <CardTitle>All Notes</CardTitle>
-
-          <CardContent>
-            <AllNotes />
-          </CardContent>
+          <p className="text-2xl font-semibold leading-none tracking-tight">
+            All Notes
+          </p>
         </CardHeader>
+
+        <CardContent>
+          <AllNotes />
+        </CardContent>
       </Card>
       <div className="col-span-2">{children}</div>
     </div>

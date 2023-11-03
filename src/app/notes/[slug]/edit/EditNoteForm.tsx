@@ -25,7 +25,9 @@ const EditNoteForm = ({ slug, title, description }: Props) => {
   return (
     <Card className="max-w-lg">
       <CardHeader>
-        <CardTitle>Edit Note</CardTitle>
+        <h1 className="text-2xl font-semibold leading-none tracking-tight">
+          Edit Note
+        </h1>
       </CardHeader>
 
       <CardContent>
