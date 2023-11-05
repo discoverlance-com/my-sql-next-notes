@@ -1,18 +1,28 @@
 import { defineConfig, devices } from "@playwright/test";
+import path from "path";
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
+require("dotenv").config({
+  path: path.resolve(
+    process.cwd(),
+    process.env.CI ? ".env" : ".env.development.local"
+  ),
+});
 
-export const baseURL = "http://127.0.0.1:3000";
+const PORT = process.env.PORT || 3000;
+
+export const baseURL = `http://127.0.0.1:${PORT}`;
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./tests",
+  // Timeout per test
+  timeout: 30 * 1000,
+  testDir: path.join(__dirname, "e2e"),
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -23,7 +33,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: "list",
-  snapshotDir: "tests/snapshots",
+  outputDir: "test-results/",
+  snapshotDir: path.join(__dirname, "e2e", "snapshots"),
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

@@ -2,7 +2,6 @@ import { test, expect } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
-  //clean the database
 });
 
 test.describe("Homepage", () => {
