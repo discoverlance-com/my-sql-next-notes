@@ -1,5 +1,5 @@
 import { getNoteWithSlug } from "~/lib/db/notes.server";
-import EditNoteForm from "./EditNoteForm";
+import EditNoteForm from "./(components)/EditNoteForm";
 import { notFound } from "next/navigation";
 
 export async function validateSlug(slug: string) {

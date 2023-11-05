@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
+import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { seedDatabase } from "~/lib/db/seed";
-import AllNotes from "./AllNotes";
+import AllNotes from "./(components)/AllNotes";
 
 export const metadata: Metadata = {
   title: "All Notes - My Notes",

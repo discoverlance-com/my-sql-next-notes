@@ -16,7 +16,7 @@ import {
   AlertDialogTrigger,
 } from "~/components/ui/alert-dialog";
 import { Button } from "~/components/ui/button";
-import { deleteNoteAction } from "./action";
+import { deleteNoteAction } from "../action";
 
 interface Props {
   slug: string;

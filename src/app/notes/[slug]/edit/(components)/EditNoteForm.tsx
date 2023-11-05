@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormState } from "react-dom";
-import { editNoteAction } from "./action";
+import { editNoteAction } from "../action";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { Label } from "~/components/ui/label";
 import { Input } from "~/components/ui/input";

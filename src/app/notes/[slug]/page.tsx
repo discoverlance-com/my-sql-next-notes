@@ -11,7 +11,7 @@ import {
 import { Button } from "~/components/ui/button";
 import { Edit } from "lucide-react";
 import Link from "next/link";
-import DeleteNoteAction from "./DeleteNoteAction";
+import DeleteNoteAction from "./(components)/DeleteNoteAction";
 
 export async function validateSlug(slug: string) {
   return await getNoteWithSlug(slug);
