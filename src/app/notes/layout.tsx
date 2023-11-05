@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { seedDatabase } from "~/lib/db/seed";
