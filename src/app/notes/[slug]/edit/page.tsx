@@ -1,10 +1,6 @@
-import { getNoteWithSlug } from "~/lib/db/notes.server";
 import EditNoteForm from "./(components)/EditNoteForm";
 import { notFound } from "next/navigation";
-
-export async function validateSlug(slug: string) {
-  return await getNoteWithSlug(slug);
-}
+import { validateSlug } from "~/lib/utils";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const note = await validateSlug(params.slug);

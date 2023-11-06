@@ -1,21 +1,16 @@
-import { getNoteWithSlug } from "~/lib/db/notes.server";
 import { notFound } from "next/navigation";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "~/components/ui/card";
 
 import { Button } from "~/components/ui/button";
 import { Edit } from "lucide-react";
 import Link from "next/link";
 import DeleteNoteAction from "./(components)/DeleteNoteAction";
-
-export async function validateSlug(slug: string) {
-  return await getNoteWithSlug(slug);
-}
+import { validateSlug } from "~/lib/utils";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const note = await validateSlug(params.slug);
