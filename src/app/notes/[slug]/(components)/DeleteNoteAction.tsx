@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-import { redirect } from "next/navigation";
 import { Trash } from "lucide-react";
 import { useFormState } from "react-dom";
 
@@ -17,6 +15,7 @@ import {
 } from "~/components/ui/alert-dialog";
 import { Button } from "~/components/ui/button";
 import { deleteNoteAction } from "../action";
+import SubmitButton from "~/components/ui/submit-button";
 
 interface Props {
   slug: string;
@@ -53,7 +52,7 @@ const DeleteNoteAction = ({ slug, title }: Props) => {
           <AlertDialogCancel>Cancel</AlertDialogCancel>
           <form action={formAction}>
             <input type="hidden" name="slug" value={slug} />
-            <Button type="submit">Continue</Button>
+            <SubmitButton type="submit">Continue</SubmitButton>
           </form>
         </AlertDialogFooter>
       </AlertDialogContent>
