@@ -18,7 +18,6 @@ export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
-  searchParams: any;
 }) {
   await setupDatabase();
 

@@ -13,8 +13,6 @@ export async function deleteNoteAction(prevState: any, formData: FormData) {
   try {
     const parsed = schema.parse({
       slug: formData.get("slug"),
-      title: formData.get("title"),
-      description: formData.get("description"),
     });
 
     // delete data from db
